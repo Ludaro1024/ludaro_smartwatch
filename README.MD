@@ -15,4 +15,4 @@ Planned Features:
 - Video playback!
 - and more!!!!!!!!!!!!!!!!
 
-<img src= https://ibb.co/nsrWgwN>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/6RYdny7/Bild-2024-05-11-015130013.png" alt="Bild-2024-05-11-015130013" border="0"></a>
