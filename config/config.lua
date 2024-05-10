@@ -1,0 +1,10 @@
+Config = {}
+-- Config.City = "Los Santos"
+-- Config.RealWeather = false
+Config.RealTime = true
+Config.Interval = 500 -- will be removed soon
+Config.OpenWatch = "openwatch"
+Config.OpenWatchKey = "I"
+Config.MoveWatch = "movewatch"
+Config.MoveWatchKey = "DELETE"
+Config.ChangeWatchFace = "RIGHT"
