@@ -13,7 +13,12 @@ const router = createRouter({
         path: "/Info",
         name: "Info",
         component: () => import("../components/smartwatchsites/Info.vue")
-    }
+    },
+    // { 
+    //   path: '/Settings',
+    //   name: 'Settings',
+    //   component: () => import('../components/smartwatchsites/Settings.vue')
+    // }
   ]
 })
 

@@ -1,0 +1,1 @@
+import"./iconify-DrSBN9h0.js";import{a as t,c as e}from"./index-DH3yiIyg.js";const s={class:"background"},d={__name:"Settings",setup(n){return window.addEventListener("message",a=>{a.data.type==="update"&&handleData(a.data)}),(a,o)=>(t(),e("div",s))}};export{d as default};
