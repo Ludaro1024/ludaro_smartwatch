@@ -111,14 +111,10 @@ function handleData(response) {
 
     idd.value = response.data.idd ?? 0;
  
-    streetName.value = response.data.streetname ?? 'Your Street Name';
+    streetName.value = (response.data.streetname ?? 'Your Street Name').substring(0, 13);
    
 }
-// axios.get(`https://${GetParentResourceName()}/update`)
-//   .then((response) => {
-//     console.log("updating data..")
-//     handleData(response)
-// });
+
 
 
 window.addEventListener('message', (event) => {

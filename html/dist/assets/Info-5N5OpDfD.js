@@ -1,1 +1,0 @@
-import{a as r,c as s}from"./index-CcjXgTU1.js";const a=(c,t)=>{const o=c.__vccOpts||c;for(const[e,n]of t)o[e]=n;return o},_={},f={class:"background"};function d(c,t){return r(),s("div",f)}const i=a(_,[["render",d]]);export{i as default};
