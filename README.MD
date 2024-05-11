@@ -7,6 +7,12 @@ and i also released it for free because yeah, its cool yk, and nothing else like
 i also made it OS to work with qb and ESX and be able to use ur own data! so yeah, enjoy!
 
 
+
+Features right now:
+
+- I makes the Watch Visible / Invisible (Configurable Key in the Config)
+- DELETE makes you able to move the watch around (keeps position)
+- RIGHT ARROW makes you able to switch faces
 Planned Features:
 
 - Animations
