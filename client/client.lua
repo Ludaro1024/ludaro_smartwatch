@@ -79,14 +79,7 @@ local time = Config.RealTime and nil or CalculateTimeToDisplay()
 RegisterNUICallback("onReady", function(data, cb)
     local playerPed = PlayerPedId()
     local playerCoords = GetEntityCoords(playerPed)
-<<<<<<< HEAD
-    -- job, money, bank = Config.Functions.GetJobMoneyAndBank()
     local streetName = GetStreetNameFromHashKey(GetStreetNameAtCoord(playerCoords.x, playerCoords.y, playerCoords.z))
-   
-=======
-
-    local streetName = GetStreetNameFromHashKey(GetStreetNameAtCoord(playerCoords.x, playerCoords.y, playerCoords.z))
->>>>>>> 2308fe8c9624a7b0cdd8684872ff2d9fe3f62fce
     cb({
         -- weather = weather,
         realtime = Config.RealTime,
@@ -118,11 +111,7 @@ end
 Citizen.CreateThread(function()
     while true do
         Wait(Config.Interval)
-<<<<<<< HEAD
         job, money, bank = Config.Functions.GetJobMoneyAndBank()
-=======
-
->>>>>>> 2308fe8c9624a7b0cdd8684872ff2d9fe3f62fce
         local playerPed = PlayerPedId()
         local playerCoords = GetEntityCoords(playerPed)
 
@@ -133,11 +122,7 @@ Citizen.CreateThread(function()
 				playerCoords.z
 			)
 		)
-<<<<<<< HEAD
-      
-=======
 
->>>>>>> 2308fe8c9624a7b0cdd8684872ff2d9fe3f62fce
 		SendNUIMessage({
 			type = "update",
             hunger = Config.Functions.GetHunger(),
@@ -151,10 +136,7 @@ Citizen.CreateThread(function()
             money = money,
             bank = bank
 		})
-<<<<<<< HEAD
-        
-=======
->>>>>>> 2308fe8c9624a7b0cdd8684872ff2d9fe3f62fce
+
     end
 end)
 
