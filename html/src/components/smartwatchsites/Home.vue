@@ -176,11 +176,11 @@ onMounted(fetchTimeAndStartTimer);
         <p class="street-name">{{ streetName }}</p>
       </div>
 
-      <div class="bottom-row">
+      <div class="bottom-row" v-if="oxygen > 0 || armor > 0">
         <div class="kevlardiv" v-if="armor > 0">
-          <Icon class="kevlaricon" icon="game-icons:kevlar-vest" :style="{ color: makenumbertocolor(kevlar) }" width="
-            1rem" height="1rem" />
-          <p class="icontextbottomright kevlartext">{{ kevlar }}</p>
+          <Icon class="kevlaricon" icon="game-icons:kevlar-vest" :style="{ color: makenumbertocolor(armor) }"
+            width="1rem" height="1rem" />
+          <p class="icontextbottomright kevlartext">{{ armor }}</p>
         </div>
         <div class="oxygendiv" v-if="oxygen > 0">
           <Icon class="oxygenicon" icon="healthicons:oxygen-tank-outline" :style="{ color: makenumbertocolor(oxygen) }"
@@ -188,6 +188,7 @@ onMounted(fetchTimeAndStartTimer);
           <p class="icontextbottomleft oxygentext">{{ oxygen }}</p>
         </div>
       </div>
+
     </div>
   </div>
 </template>
@@ -203,20 +204,37 @@ onMounted(fetchTimeAndStartTimer);
   height: 100%;
 }
 
-.icontextbottomright{
-  margin-left: auto;
-  margin-right: 20px; /* Erhöht den Abstand auf der rechten Seite */
+..bottom-row {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  /* Center the items horizontally */
+  align-items: flex-end;
+  /* Align items to the bottom */
+  margin-bottom: 5%;
 }
 
-.icontextbottomleft{
-  margin-right: auto;
+.oxygendiv,
+.kevlardiv {
+  display: flex;
+  align-items: center;
+  position: absolute;
 }
 
-.bottom-row {
-display: flex;
-justify-content: center;
-align-items: flex-end;
-margin-bottom: 5%
+.oxygendiv {
+  left: 50%;
+  /* Initially place oxygen in the middle */
+}
+
+.kevlardiv {
+  right: 50%;
+  /* Initially place kevlar in the middle */
+}
+
+.icontextbottomleft,
+.icontextbottomright {
+  margin: 0 0.5rem;
+  /* Adjust the margin between the icon and text */
 }
 .idd {
   position: absolute;

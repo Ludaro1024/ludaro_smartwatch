@@ -1,6 +1,18 @@
 
+<script setup>
+window.addEventListener('message', (event) => {
+
+    if (event.data.type === "update") {
+        handleData(event)
+    }
+});
+function handleData(){
+
+}
+</script>
 <template>
     <div class="background">
+
         </div>
 </template>
 
@@ -15,3 +27,6 @@
     height: 100%;
 }
 </style>
+
+<!-- hello how are you -->
+
