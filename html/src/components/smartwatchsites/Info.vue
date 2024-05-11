@@ -2,12 +2,18 @@
 <script setup>
 import { Icon } from '@iconify/vue';
 import { ref, onMounted } from 'vue'
+import axios from 'axios';
+
 window.addEventListener('message', (event) => {
 
     if (event.data.type === "update") {
         handleData(event.data)
     }
 });
+axios.get(`https://${GetParentResourceName()}/onReady`)
+    .then((response) => {
+      handleData(response.data)
+})
 
 const cash = ref(0);
 const bank = ref(0);
@@ -28,7 +34,6 @@ function handleData(data){
     }
 
    
-
 
 
 }

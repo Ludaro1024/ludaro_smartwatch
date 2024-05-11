@@ -22,13 +22,13 @@ onMounted(() => {
       if (currentIndex > sites.length - 1) {
         currentIndex = 0;
       }
-
+     
       router.push(sites[currentIndex]);
     } else if (event.data.type === 'data') {
       weather = event.data.settings.weather
-  
+      console.log("Weather: ", weather);
       time = event.data.settings.time
-
+      console.log("Time: ", time);
     } else if (event.data.type != "update") {
        displayUI[event.data.type].value = !displayUI[event.data.type].value;
     }

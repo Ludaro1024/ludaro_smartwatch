@@ -3,6 +3,7 @@ import { ref, onMounted } from 'vue'
 import axios from 'axios';
 import { Icon } from '@iconify/vue';
 
+
 const time = ref('00:00:00'); 
 const hunger = ref(0);
 const thirst = ref(0);
@@ -121,12 +122,13 @@ window.addEventListener('message', (event) => {
 
   if(event.data.type === "update"){
     handleData(event)
+    
   }
 });
 function fetchTimeAndStartTimer() {  // proper fivem time ol
   axios.get(`https://${GetParentResourceName()}/onReady`)
     .then((response) => {
-      if (response.data && response.data.time) {
+      if ( response.data && response.data.time && response.data.realtime != true ) {
         time.value = response.data.time;  
         setInterval(incrementTime, 25.5,);  
       }else{
@@ -214,7 +216,7 @@ onMounted(fetchTimeAndStartTimer);
 .kevlardiv {
   display: flex;
   align-items: center;
-  position: absolute;
+  position: relative;
 }
 
 .oxygendiv {
