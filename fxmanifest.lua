@@ -1,5 +1,6 @@
 fx_version("cerulean")
 game("gta5")
+lua54("yes")
 
 author("Ludaro")
 description("Ludaro Smartwatch hud")
@@ -10,8 +11,8 @@ client_scripts({
 })
 
 server_scripts({
-		"server/*.lua",
 	"@oxmysql/lib/MySQL.lua",
+	"server/*.lua",
 })
 
 shared_scripts({
@@ -23,8 +24,6 @@ ui_page({
 })
 
 files({
-	"html/dist/index.html",
-	"html/dist/assets/*.*",
+	"html/dist/**",
 })
 
-lua54("yes")
