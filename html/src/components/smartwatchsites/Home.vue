@@ -200,7 +200,7 @@ onMounted(fetchTimeAndStartTimer);
   height: 100%;
 }
 
-..bottom-row {
+.bottom-row {
   position: relative;
   display: flex;
   justify-content: center;
